@@ -1,0 +1,41 @@
+<ion-view hide-nav-bar="true">
+	<ion-content class="main-pane" scroll="false" ng-controller="LoginSignupCtrl">
+		    <!-- Header Bar Start -->
+      	<div class="top-bar">
+          <h1>Sign Up</h1>
+          <h1 class="banner-text"><span>incs</span> are waiting for you</h1>
+          <p>Please fill the information</p>
+        </div>
+      	<!-- Header Bar Finish -->
+
+        <div class="profile-pic-select">
+          <a>
+            <span><i class="icon ion-ios-camera"></i></span>
+          </a>
+          <p>Take your photo</p>
+        </div>
+
+      	<!-- Login Section Start -->
+      	<div class="list padding login-signup-section">
+          <label class="item item-input">
+              <span class="input-label"><i class="icon ion-ios-person-outline"></i></span>
+              <input type="text" id="user_name" placeholder="Your Name">
+          </label>
+        	<label class="item item-input">
+          		<span class="input-label"><i class="icon ion-ios-email-outline"></i></span>
+          		<input type="text" placeholder="Email Address">
+        	</label>
+        	<label class="item item-input">
+          		<span class="input-label"><i class="icon ion-ios-locked-outline"></i></span>
+          		<input type="password" placeholder="Password">
+        	</label>
+        	<button id="signup-submit" class="button button-block">
+          		join us now
+        	</button>
+          <a href="#/login" class="button button-block button-transparent">
+              already have an account?
+          </a>      	
+        </div>
+      	<!-- Login Section Finish -->
+	</ion-content>
+</ion-view>

@@ -1,0 +1,41 @@
+<ion-view hide-nav-bar="true">
+	<ion-content class="main-pane" scroll="false" ng-controller="LoginSignupCtrl">
+		<!-- Header Bar Start -->
+      	<div class="logo-bar">
+        	<h1 class="title large">social<span>inc</span></h1>
+      	</div>
+      	<!-- Header Bar Finish -->
+
+      	<div class="logo-text">
+      		<h1>Connect with incs</h1>
+      		<p>Connect to the nearest incorporation with your social links</p>
+      	</div>
+
+      	<!-- Login Section Start -->
+      	<div class="list padding login-signup-section">
+        	<label class="item item-input">
+          		<span class="input-label"><i class="icon ion-ios-email-outline"></i></span>
+          		<input type="text" placeholder="Email Address">
+        	</label>
+        	<label class="item item-input">
+          		<span class="input-label"><i class="icon ion-ios-locked-outline"></i></span>
+          		<input type="password" placeholder="Password">
+        	</label>
+        	<a href="#/profile" ng-click="clearHistory()" nav-direction="swap" id="login" class="button button-block button-energized">
+          		login
+        	</a>
+        	<a href="#/signup" id="signup" class="button button-block">
+          		sign up
+        	</a>
+        	<button id="facebook" class="row">
+          		<div class="col col-20">
+            		<i class="icon ion-social-facebook"></i>
+          		</div>
+          		<div class="col col-80">
+            		connect with <strong>Facebook</strong>
+          		</div>
+        	</button>
+      	</div>
+      	<!-- Login Section Finish -->
+	</ion-content>
+</ion-view>

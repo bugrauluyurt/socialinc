@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; script-src &apos;self&apos; &apos;unsafe-inline&apos; &apos;unsafe-eval&apos; *; style-src  &apos;self&apos; &apos;unsafe-inline&apos; *">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- script is put in order to see console log in xcode -->
+    <script type="text/javascript">
+      window.onerror = function(message, url, lineNumber) {
+          console.log("Error: "+message+" in "+url+" at line "+lineNumber);
+      }
+    </script>
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+  </head>
+  <body ng-app="socialinc" ng-controller="AppCtrl" ng-cloak="">
+
+    <ion-side-menus enable-menu-with-back-views="true">
+
+      <ion-side-menu-content>
+        <!-- Nav-bar start -->
+        <ion-nav-bar class="bar-stable" align-title="center">
+          <!-- Back button start -->
+          <ion-nav-back-button class="button-clear">
+            <i class="ion-ios-arrow-thin-left"></i> Back
+          </ion-nav-back-button>
+          <!-- Back button finish -->
+          <!-- Left-nav button start -->
+          <ion-nav-buttons side="left">
+            <button menu-toggle="left" class="button button-icon button-clear ion-navicon"></button>
+          </ion-nav-buttons>
+          <!-- Left-nav button finish -->
+        </ion-nav-bar>
+        <!-- Nav-bar finish -->
+
+        <ion-nav-view>
+          <!-- Different views come into this section>-->
+        </ion-nav-view>
+      </ion-side-menu-content>
+
+      <ion-side-menu side="left" width="250">
+        <ion-header-bar class="bar-stable">
+          <h1 class="title side-menu-title">{{user.name}}</h1>
+        </ion-header-bar>
+        <ion-content>
+          <ion-list class="left-side-menu-content">
+            <ion-item menu-close="" href="#/profile" class="item item-icon-left">
+              <i class="icon ion-ios-eye-outline"></i>My profile
+            </ion-item>
+            <ion-item menu-close="" href="#" class="item item-icon-left">
+              <i class="icon ion-ios-star-outline"></i>Favourites
+            </ion-item>
+            <ion-item menu-close="" href="#" class="item item-icon-left">
+              <i class="icon ion-ios-people-outline"></i>Contacts
+            </ion-item>
+            <ion-item menu-close="" href="#" class="item item-icon-left">
+              <i class="icon ion-ios-information-outline"></i>Alerts
+              <span class="badge badge-assertive">2</span>
+            </ion-item>
+            <ion-item menu-close="" href="#" class="item item-icon-left">
+              <i class="icon ion-ios-email-outline"></i>Messages
+              <span class="badge badge-assertive">1</span>
+            </ion-item>
+            <ion-item menu-close="" href="#" class="item item-icon-left">
+              <i class="icon ion-ios-flag-outline"></i>Awaiting approval
+              <span class="badge badge-stable">1</span>
+            </ion-item>
+            <ion-item menu-close="" href="#" class="item item-icon-left">
+              <i class="icon ion-ios-compose-outline"></i>Awaiting feedback
+              <span class="badge badge-stable">0</span>
+            </ion-item>
+            <ion-item menu-close="" href="#/login" ng-click="statusBarHide()">Logout</ion-item>
+          </ion-list>
+        </ion-content>
+      </ion-side-menu>
+
+    </ion-side-menus>
+  <!-- jquery -->
+  <script src="lib/jquery/jquery-2.0.2.js"></script>
+  <!-- ionic/angularjs js -->
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
+  <!-- stellar js -->
+  <script src="lib/stellar/jquery.stellar.js"></script>
+  <!-- cordova script (this will be a 404 during development) -->
+  <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
+  <script src="//maps.googleapis.com/maps/api/js?sensor=false"></script>
+  <script src="lib/angular-google-maps/dist/angular-google-maps.min.js"></script>
+  <script src="lib/angular-simple-logger/dist/index.js"></script>
+  <script src="lib/lodash/lodash.min.js"></script>
+  <script src="cordova.js"></script>
+  <!-- your app's js -->
+  <script src="js/app.js"></script>
+
+  </body>
+</html>

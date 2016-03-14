@@ -1,0 +1,67 @@
+<ion-view view-title="PROFILE" cache-view="false" ng-controller="ProfileCtrl">
+  	<ion-nav-buttons side="right">
+    	<a href="#/provider" class="header-button">My inc <i class="ion-ios-arrow-right"></i></a>
+  	</ion-nav-buttons>
+	<ion-content has-bouncing="false" stellax>
+		<div class="profile-main" data-stellar-ratio="0.8">
+			<div class="profile-pic">
+				<img src="{{user.profilePic}}" alt="">
+			</div>
+			<p id="user-name">{{user.name}}</p>
+			<p id="like-count"><i class="icon ion-ios-heart-outline"></i> <span>{{user.likeCount}} likes</span></p>
+			<a href="" class="btn btn-s btn-yellow">edit profile</a>
+			
+			<div class="bottom-line padding">
+				<a href="" title=""><span>3</span><br> appointments</a>
+				<a href="" title=""><span>31</span><br> feedbacks</a>
+				<a href="" title=""><span>12</span><br> classes</a>
+			</div>
+		</div>
+		<!-- Upcoming Classes Start -->
+		<div id="" class="classesAppointments list" data-stellar-ratio="1.2">
+
+		  <div class="item item-divider">
+		    UPCOMING CLASSES  |  APPOINTMENTS
+		  </div>
+		  <a class="item item-icon-left item-button-right" href="#">
+		  	<i class="icon ion-ios-people"></i>
+		    <span class="item-header">Yoga class</span>
+		    <span>Alican O.</span>
+		    <span>Thursday 4/16/2015 5:30PM</span>
+		    <span class="item-note">pending</span>
+		  </a>
+		  <a class="item item-icon-left" href="#">
+		  	<i class="icon ion-calendar"></i>
+		    <span class="item-header">Dentist appoinment</span>
+		    <span>Sean H.</span>
+		    <span>Friday 4/17/2015 6:30PM</span>
+		    <span class="item-note">pending</span>
+		  </a>
+		  <a class="item item-icon-left" href="#">
+		  	<i class="icon ion-ios-people"></i>
+		    <span class="item-header">Basketball class</span>
+		    <span>Bugra U.</span>
+		    <span>Sunday 4/19/2015 7:30AM</span>
+		    <span class="item-note">approved</span>
+		  </a>
+		  <a class="item item-icon-left" href="#">
+		  	<i class="icon ion-ios-people"></i>
+		    <span class="item-header">Cooking class</span>
+		    <span>Tuna V.</span>
+		    <span>Tuesday 4/21/2015 8:30PM</span>
+		    <span class="item-note">rejected</span>
+		  </a>
+		</div>
+		<!-- Upcoming Classes Start -->
+
+
+	</ion-content>
+	<div class="tabs profile-tabs-bottom">
+	  <a class="tab-item icon-left ion-search" href="#/searchclass">
+	    &nbspFIND A CLASS
+	  </a>
+	  <a class="tab-item">
+	    BOOK AN APPOINTMENT
+	  </a>
+	</div>
+</ion-view>
